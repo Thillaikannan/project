@@ -44,7 +44,7 @@ const Auth = () => {
                 <form onSubmit ={handleSubmit}>
                     {
                         isSignup && (
-                            <label htmlfor = 'name'>
+                            <label htmlFor = 'name'>
                                 <h4>Display name</h4>
                                 <input type="text" id='name' name='name' onChange={(e) => {setName(e.target.value)}}/>
                             </label>
@@ -52,11 +52,11 @@ const Auth = () => {
 
 
                     }
-                    <label html for ="email">
+                    <label htmlFor ="email">
                         <h4>Email</h4>
                         <input type ="email" name="email" id='email' onChange={(e) => {setEmail(e.target.value)}}/>
                     </label>
-                <label html for ="password">
+                <label htmlFor ="password">
                     <div style={{display : 'flex' , justifyContent : 'space-between'}}>
                         <h4>Password</h4>
                         { !isSignup && <p style={{color:"#007ac6", fontSize:'13px'}}>Forget password</p>}
@@ -70,7 +70,7 @@ const Auth = () => {
                 </label>
                     {
                         isSignup &&(
-                            <label html for ='check'>
+                            <label htmlFor ='check'>
                                 <input type="checkbox" id='check'/>
                                 <p style={{fontSize:"13px"}}>opt-in to recieve occasional <br/>product updates,user research invitations,<br/>company announcements, and digets</p>
 
