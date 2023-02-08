@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
-
+import questionRoutes from './routes/Questions.js'
 import userRoutes from './routes/users.js'
 
 const app = express () ;
@@ -19,6 +19,8 @@ app.get('/',(req, res) => {
 }) 
 
 app.use('/user', userRoutes)
+app.use('/questions',questionRoutes)
+
 const PORT = process.env.PORT || 5000
 
 const CONNECTION_URL = "mongodb://sthillaikannan:stkannan@ac-rjtithi-shard-00-00.8nvwtrn.mongodb.net:27017,ac-rjtithi-shard-00-01.8nvwtrn.mongodb.net:27017,ac-rjtithi-shard-00-02.8nvwtrn.mongodb.net:27017/?ssl=true&replicaSet=atlas-e2mgqa-shard-0&authSource=admin&retryWrites=true&w=majority"

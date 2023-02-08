@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 
 const Questions = ({question}) => {
@@ -14,11 +14,11 @@ const Questions = ({question}) => {
         <p>answers</p>
       </div>
       <div className="display-question-details">
-        <Link to={`/Questions/${question.id}`} className='question-title-link'>{question.questionTitle}</Link>
+        <Link to={`/Questions/${question._id}`} className='question-title-link'>{question.questionTitle}</Link>
     <div className='display-tags-time'>
         <div className='display-tags'>
             {
-                question.questionTags.map((tags) => (
+                question.questionTags?.map((tags) => (
                     <p key={tags}>{tags}</p>
                 
                     ))
@@ -29,10 +29,10 @@ const Questions = ({question}) => {
             asked {question.askedOn} {question.userPosted}
         </p>
 
-    </div>
+          </div>
       </div>
     </div>
   )
-}
+};
 
-export default Questions
+export default Questions;

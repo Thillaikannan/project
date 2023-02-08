@@ -35,7 +35,7 @@ export const login = async (req, res) => {
         if(!isPasswordCorrect){
             return res.status(400).json({message: "invalid password"})
         }
-        const token = jwt.sign({ email: existinguser.email, id:existinguser._id}, "test", { exxpiresIn: '1h'});
+        const token = jwt.sign({ email: existinguser.email, id:existinguser._id}, "test", { expiresIn: '1h'});
         res.status(200).json({ result: existinguser, token})
     }catch(error){
         console.log(error);

@@ -1,8 +1,8 @@
-const authReducer = (state= { data:null}, action) => {
-    switch(action.type) {
-        case 'AUTH':
-            localStorage.setItem('Profile', JSON.stringify({ ...action?.data}))
-            return { ...state, data: action?.data }
+const authReducer = (state= { data:null }, action) => {
+    switch (action.type) {
+        case "AUTH":
+            localStorage.setItem("Profile", JSON.stringify({ ...action.data }));
+            return { ...state, data: action.data };
             
 
         default:
@@ -10,4 +10,4 @@ const authReducer = (state= { data:null}, action) => {
         }
 }
 
-export default authReducer
+export default authReducer;
