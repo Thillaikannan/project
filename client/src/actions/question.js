@@ -5,6 +5,7 @@ export const askQuestion = (questionData, navigate) =>  async (dispatch) => {
           const { data } = await api.postQuestion(questionData)
      //   const data = null;
         dispatch({ type: "POST_QUESTION", payload: data});
+        dispatch(fetchAllQuestions())
         navigate("/")
         console.log(data);
    }

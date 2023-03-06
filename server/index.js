@@ -4,6 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import questionRoutes from './routes/Questions.js'
 import userRoutes from './routes/users.js'
+import answerRoutes from './routes/Answer.js'
 
 const app = express () ;
 
@@ -20,6 +21,7 @@ app.get('/',(req, res) => {
 
 app.use('/user', userRoutes)
 app.use('/questions',questionRoutes)
+app.use('/answer',answerRoutes)
 
 const PORT = process.env.PORT || 5000
 

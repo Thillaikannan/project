@@ -12,7 +12,7 @@ const HomeMainbar = () => {
   const navigate = useNavigate()
 
   const questionsList = useSelector(state => state.questionsReducer)
-  console.log(questionsList);
+//  console.log(questionsList);
 
   
 //      var questionsList = [{ 
