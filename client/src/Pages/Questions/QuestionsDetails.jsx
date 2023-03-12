@@ -1,12 +1,12 @@
-import React,{ useState } from 'react'
-import { Link, useParams,useNavigate } from 'react-router-dom'
-import { useSelector,useDispatch } from 'react-redux'
-import upvote from '../../assets/sort-up.svg'
-import downvote from '../../assets/sort-down.svg'
-import './Questions.css'
-import Avatar from '../../components/Avatar/Avatar'
-import DisplayAnswer from'./DisplayAnswer'
-import { postAnswer } from '../../actions/question'
+import React,{ useState } from "react";
+import { Link, useParams,useNavigate } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
+import upvote from "../../assets/sort-up.svg";
+import downvote from "../../assets/sort-down.svg";
+import "./Questions.css";
+import Avatar from "../../components/Avatar/Avatar";
+import DisplayAnswer from"./DisplayAnswer";
+import { postAnswer } from "../../actions/question";
 const QuestionsDetails = () => {
 
     const { id } = useParams()
@@ -65,7 +65,7 @@ const QuestionsDetails = () => {
  //       }]
  //   }]
 
-  useState[ Answer, setAnswer ] = useState('');
+  const [ Answer , setAnswer ] = useState('');
   const Navigate = useNavigate()
   const dispatch = useDispatch()
   const User = useSelector((state) => (state.currentUserReducer));
@@ -75,7 +75,7 @@ const QuestionsDetails = () => {
         alert('Login or Signup to answer')
         Navigate('/Auth')
     }else{
-        if(Answer ==='' ){
+        if(Answer === '' ){
             alert('enter an answer')
         } else{
             dispatch(postAnswer({ id,noOfAnswers: answerLength + 1, answerBody: Answer, userAnswered: User.result.name }))
@@ -139,7 +139,7 @@ const QuestionsDetails = () => {
                         <section className="post-ans-container">
                             <h3>Your Answer</h3>
                             <form onSubmit={ (e) => { handlePostAns(e,question.answer.length) }}>
-                                <textarea name="" id="" cols="30" rows="10" onChange={e => setAnswer(e.target.value)}></textarea><br />
+                                <textarea name="" id="" cols="30" rows="10" onChange={e => setAnswer (e.target.value)}></textarea><br />
                                 <input type="submit" className='post-ans-btn' value='post Your answer'/>
                             </form>
                             <p>

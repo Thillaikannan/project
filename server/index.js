@@ -4,7 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import questionRoutes from './routes/Questions.js'
 import userRoutes from './routes/users.js'
-import answerRoutes from './routes/Answer.js'
+import answerRoutes from './routes/Answers.js'
 
 const app = express () ;
 
